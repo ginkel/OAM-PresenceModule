@@ -2,18 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../OAM-LogicModule"
-		},
-		{
-			"path": "../OGM-SensorDevices"
-		},
-		{
-			"path": "../OGM-Common"
-		},
-		{
-			"path": "../knx"
 		}
 	],
 	"settings": {
