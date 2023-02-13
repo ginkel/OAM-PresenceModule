@@ -74,6 +74,10 @@
                 <LdCtrlLoadImageProp ObjIdx="4" PropId="27" />
               </LoadProcedure>
             </LoadProcedures>
+            <Extension>
+              <op:include href="PMmodul.share.xml" xpath="//Extension/*" prefix="PM" />
+              <op:include href="../lib/OAM-LogicModule/src/Logikmodul.share.xml" xpath="//Extension/*" prefix="LOG" />
+            </Extension>
             <Messages>
               <Message Id="%AID%_M-1" Name="VersionMismatch" Text="Diese Applikaiton und die Firmware passen nicht zusammen" />
             </Messages>
@@ -104,6 +108,10 @@
           </Dynamic>
         </ApplicationProgram>
       </ApplicationPrograms>
+      <Baggages>
+        <op:include href="PMmodul.share.xml" xpath="//Baggages/*" prefix="PM" />
+        <op:include href="../lib/OAM-LogicModule/src/Logikmodul.share.xml" xpath="//Baggages/*" prefix="LOG" />
+      </Baggages>
       <Hardware>
         <Hardware Id="%HardwareId%" Name="OpenKNX-Presence" SerialNumber="OpenKNXWPA000" VersionNumber="1" BusCurrent="10" HasIndividualAddress="true" HasApplicationProgram="true">
           <Products>

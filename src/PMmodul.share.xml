@@ -352,6 +352,10 @@
               <ComObjectRef Id="%AID%_O-%T%000008_R-%T%00000801" RefId="%AID%_O-%T%000008" />
               <ComObjectRef Id="%AID%_O-%T%000009_R-%T%00000901" RefId="%AID%_O-%T%000009" />
             </ComObjectRefs>
+            <Extension>
+              <Baggage RefId="%FILE-HelpFile-de%" />
+              <Baggage RefId="%FILE-openknx%" />
+            </Extension>
           </Static>
           <Dynamic>
             <Channel Id="%AID%_CH-1" Name="PMChannels" Number="1" Text="PM-Kanäle">
@@ -472,6 +476,14 @@
           </Dynamic>
         </ApplicationProgram>
       </ApplicationPrograms>
+      <Baggages>
+        <Baggage TargetPath="00" Name="HelpFile_de-DE.zip" Id="%FILE-HelpFile-de%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+        <Baggage TargetPath="" Name="knx3.jpg" Id="%FILE-openknx%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+      </Baggages>
     </Manufacturer>
   </ManufacturerData>
 </KNX>
