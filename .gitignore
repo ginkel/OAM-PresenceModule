@@ -9,3 +9,4 @@ release/*
 release-package/*
 doc/TP_Radar_Sensor/*
 src/Baggages.debug/*
+src/*.baggages/*
