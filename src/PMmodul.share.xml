@@ -473,6 +473,10 @@
         </ApplicationProgram>
       </ApplicationPrograms>
       <Baggages>
+        <!-- Alternative addressing example with relative path. This path is always relative to src dir -->
+        <!-- <Baggage TargetPath="A0\00" Name="..\..\OGM-Common\resources\OpenKNX-Logo.png" Id="%FILE-Icon-Test%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage> -->
         <Baggage TargetPath="00" Name="HelpFile_de-DE.zip" Id="%FILE-HELP-de%">
           <FileInfo TimeInfo="%DATETIME%" />
         </Baggage>
