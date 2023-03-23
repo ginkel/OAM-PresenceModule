@@ -85,7 +85,7 @@
           <Dynamic>
             <ChannelIndependentBlock>
               <!-- ChannelIndependentBlock is a composition of different parts of different modules -->
-              <ParameterBlock Id="%AID%_PB-1" Name="General" Text="Allgemeine Parameter">
+              <ParameterBlock Id="%AID%_PB-1" Name="General" Text="Allgemeine Parameter" HelpContext="Testdokument">
                 <!-- <op:include href="PMmodul.parts.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='Init']/*" prefix="PM" /> -->
                 <op:include href="../lib/OAM-LogicModule/src/Logikmodul.parts.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='General']/*" prefix="LOG" />
                 <!-- <op:include href="PMmodul.parts.xml" xpath="//Dynamic/ChannelIndependentBlock/ParameterBlock[@Name='Hardware']/*" prefix="PM" /> -->
@@ -110,6 +110,7 @@
       <Baggages>
         <op:include href="PMmodul.share.xml" xpath="//Baggages/*" prefix="PM" />
         <op:include href="../lib/OAM-LogicModule/src/Logikmodul.share.xml" xpath="//Baggages/*" prefix="LOG" />
+        <op:include href="../lib/OGM-Common/src/Common.share.xml" xpath="//Baggages/*" prefix="COM"/>
       </Baggages>
       <Hardware>
         <Hardware Id="%HardwareId%" Name="OpenKNX-Presence" SerialNumber="OpenKNXWPA000" VersionNumber="1" BusCurrent="10" HasIndividualAddress="true" HasApplicationProgram="true">

@@ -477,7 +477,10 @@
         <!-- <Baggage TargetPath="A0\00" Name="..\..\OGM-Common\resources\OpenKNX-Logo.png" Id="%FILE-Icon-Test%">
           <FileInfo TimeInfo="%DATETIME%" />
         </Baggage> -->
-        <Baggage TargetPath="00" Name="HelpFile_de-DE.zip" Id="%FILE-HELP-de%">
+        <Baggage TargetPath="A0\00" Name="PresenceHelpFile_de-DE.zip" Id="%FILE-HELP-de%">
+          <FileInfo TimeInfo="%DATETIME%" />
+        </Baggage>
+        <Baggage TargetPath="A0\00" Name="PresenceIcons.zip" Id="%FILE-ICONS%">
           <FileInfo TimeInfo="%DATETIME%" />
         </Baggage>
       </Baggages>
