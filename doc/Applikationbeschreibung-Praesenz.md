@@ -1,5 +1,5 @@
 
-<!-- 
+<!--
 cSpell:words Präsenzmelder Präsenzkanäle Präsenzerkennung Präsenzinformationen Präsenzsensor Präsenzkanälen Präsenzsignal Präsenzinformation Präsenzeingänge präsenzerfassende Präsenzeinstellungen Präsenzsignals präsenzabhängig Präsenzmodul Präsenzmoduls Praesenz
 cSpell:words Helligkeitsgesteuert Helligkeitsunabhängig helligkeitsbasierte Luxwert helligkeitsbezogenen Helligkeitsabhängig helligkeitsverändernden
 cSpell:words Szenennutzung Szenensteuerung szenensteuerung
@@ -114,16 +114,16 @@ Im folgenden werden Änderungen an dem Dokument erfasst, damit man nicht immer d
 
 * FIX: Rückfallzeit für Sperre funktionierte nicht, ist jetzt korrigiert.
 * NEU: Tagesphasen kann man jetzt auch über die Szenensteuerung wechseln, Neuerungen hierzu sind im Kapitel [Szenensteuerung](#szenensteuerung) beschrieben.
-* NEU: Über die Szenensteuerung kann man jetzt auch den Manuellmodus aktivieren und deaktivieren (wie bei Eintastensteuerung). Siehe dazu Kapitel [Szenensteuerung](#szenensteuerung) 
-* NEU: Über die Szenensteuerung kann man jetzt alle Sperrmodi (unabhängig von der Konfiguration der Sperre) setzen und zurücksetzen. Siehe dazu Kapitel [Szenensteuerung](#szenensteuerung) 
+* NEU: Über die Szenensteuerung kann man jetzt auch den Manuellmodus aktivieren und deaktivieren (wie bei Eintastensteuerung). Siehe dazu Kapitel [Szenensteuerung](#szenensteuerung)
+* NEU: Über die Szenensteuerung kann man jetzt alle Sperrmodi (unabhängig von der Konfiguration der Sperre) setzen und zurücksetzen. Siehe dazu Kapitel [Szenensteuerung](#szenensteuerung)
 * FIX: Sperre hat jetzt auch ein Ü-Flag
 
 20.11.2022: Firmware 1.3.1, Applikation 1.3
 
-* FIX: Helligkeitsschwellen (zum Ein- und Ausschalten) und Nachlaufzeit werden beim Startup erst nach der Startverzögerung des Kanals gesendet 
+* FIX: Helligkeitsschwellen (zum Ein- und Ausschalten) und Nachlaufzeit werden beim Startup erst nach der Startverzögerung des Kanals gesendet
 * NEU: Status Manuell und Status Sperre werden jetzt auch beim Startup (nach der Startverzögerung) des Kanals gesendet
 * FIX: Ein Aktorstatus EIN während der Totzeit von "Raum verlassen" konnte dazu führen, dass der Melder intern EIN blieb, obwohl der Ausgang AUS war. Symptom: Licht wurde nicht mehr automatisch eingeschaltet.
-* FIX: Ein AUS an einem schaltenden Präsenz- oder Bewegungseingang konnte dazu führen, dass die Nachlaufzeit erneut gestartet wurde.  
+* FIX: Ein AUS an einem schaltenden Präsenz- oder Bewegungseingang konnte dazu führen, dass die Nachlaufzeit erneut gestartet wurde.
 * FIX: ETS-Applikation hat "Raum Verlassen" nicht immer angezeigt.
 * NEU: Kapitel [Wichtige Anmerkungen](#wichtige-anmerkungen), das Erkenntnisse aus Tests und User Feedback beschreibt, um andere User vor Fehlern zu bewahren.
 * NEU: Weitere Hardware verfügbar ([Siehe unterstützte Hardware](#unterstützte-hardware))
@@ -197,7 +197,7 @@ Diese Präsenzmelder-Applikation implementiert folgende Funktionen:
 
 * Logikmodul mit vielen weiteren Funktionen
   * mit dem integrierten Logikmodul können weitere Funktionen in den PM integriert werden
-  * Interne KO können auch zwischen PM und Logik verwendet werden 
+  * Interne KO können auch zwischen PM und Logik verwendet werden
 
 ### Tagesphasen
 
@@ -250,7 +250,7 @@ Eine Sperre kann nur durch einen Entsperrbefehl oder automatisch nach der einges
 
 #### **Manuellmodus**
 
-Der Manuellmodus ist ähnlich dem Sperrmodus, allerdings mit geringerer Priorität und flexibler. 
+Der Manuellmodus ist ähnlich dem Sperrmodus, allerdings mit geringerer Priorität und flexibler.
 
 #### **Automatikmodus**
 
@@ -313,7 +313,7 @@ Da diese Applikation auch als virtueller Präsenzmelder fungieren kann, ist kein
 
 #### **Präsenz-Sensor**
 
-Der vorhandene Präsenz-Sensor kann hier ausgewählt werden. Derzeit werden entweder ein PIR-Sensor oder der HF-Sensor MR24xxB1 unterstützt.
+Der vorhandene Präsenz-Sensor kann hier ausgewählt werden. Derzeit werden entweder ein PIR-Sensor, der HF-Sensor MR24xxB1 oder der HF-Sensor LD2410(B) unterstützt.
 
 #### **Helligkeits-Sensor**
 
@@ -329,7 +329,7 @@ Erscheint nur, wenn ein Hardware-Präsenzsensor ausgewählt ist.
 
 Erscheint nur, wenn als Hardware-Präsenzsensor der HF-Sensor ausgewählt worden ist.
 
-Hier kann man das vom Hersteller des HF-Sensors vorgesehene Szenario für die Detektion von Präsenz auswählen, das nach einem Neustart zur Verfügung steht. Die aufgeführten Werte sind dem technischen Dokument entnommen, inclusive der angenommenen Montage. Inwiefern das zum realen Einsatzort passt, können wir derzeit nicht beurteilen. Aktuelle Empfehlung ist, die Werte durchzuprobieren, bis man ein für sich passendes Erfassungsszenario gefunden hat. 
+Hier kann man das vom Hersteller des HF-Sensors vorgesehene Szenario für die Detektion von Präsenz auswählen, das nach einem Neustart zur Verfügung steht. Die aufgeführten Werte sind dem technischen Dokument entnommen, inclusive der angenommenen Montage. Inwiefern das zum realen Einsatzort passt, können wir derzeit nicht beurteilen. Aktuelle Empfehlung ist, die Werte durchzuprobieren, bis man ein für sich passendes Erfassungsszenario gefunden hat.
 
 ![Verfügbare Szenarien](pics/Szenario.png)
 
@@ -341,7 +341,7 @@ Der Wert für das Szenario kann auch über das KO 26 (Eingang Szenario) gesetzt 
 
 Erscheint nur, wenn als Hardware-Präsenzsensor der HF-Sensor ausgewählt worden ist.
 
-Hier kann die Sensor-Empfindlichkeit in 10%-Stufen eingestellt werden. 100% ist volle Empfindlichkeit, 10% ist 1/10 der vollen Empfindlichkeit. Eine niedrige Empfindlichkeit bedeutet geringe Präsenzerkennung, aber auch geringe Störeinflüsse. Eine hohe Empfindlichkeit bedeutet gute Präsenzerkennung, aber auch eine hohe Wahrscheinlichkeit von Störeinflüssen (z.B. Wind, Luftzug). Man sollte die Empfindlichkeit nach dem Motto 
+Hier kann die Sensor-Empfindlichkeit in 10%-Stufen eingestellt werden. 100% ist volle Empfindlichkeit, 10% ist 1/10 der vollen Empfindlichkeit. Eine niedrige Empfindlichkeit bedeutet geringe Präsenzerkennung, aber auch geringe Störeinflüsse. Eine hohe Empfindlichkeit bedeutet gute Präsenzerkennung, aber auch eine hohe Wahrscheinlichkeit von Störeinflüssen (z.B. Wind, Luftzug). Man sollte die Empfindlichkeit nach dem Motto
 
 > So empfindlich wie nötig, aber so gering wie möglich
 
@@ -446,9 +446,9 @@ Die Modi im Einzelnen am Beispiel vom geschalteten Licht:
 
 #### **Normalmodus**
 
-Im Normalmodus läuft der Melder die meiste Zeit. Helligkeit und Präsenz werden ausgewertet. Wenn es also dunkel ist und Bewegung im Raum ist, wird das Licht eingeschaltet. Wenn es wieder heller wird oder alle aus dem Raum raus sind, wird wieder ausgeschaltet, wobei vorher noch eine gewisse Nachlaufzeit gewartet wird. 
+Im Normalmodus läuft der Melder die meiste Zeit. Helligkeit und Präsenz werden ausgewertet. Wenn es also dunkel ist und Bewegung im Raum ist, wird das Licht eingeschaltet. Wenn es wieder heller wird oder alle aus dem Raum raus sind, wird wieder ausgeschaltet, wobei vorher noch eine gewisse Nachlaufzeit gewartet wird.
 
-#### **Automodus** 
+#### **Automodus**
 
 Man sitzt im Raum, möchte etwas arbeiten/lesen/spielen an einem verregneten Tag und es ist einem zu dunkel. Formal betrachtet ist es noch nicht zu dunkel laut der Parametrisierung des Melders, aber das subjektive Empfinden ist anders. Man will also das Licht einschalten, obwohl es für den Melder noch nicht zu dunkel ist. Würde man das Licht einfach so anmachen, würde er bei der nächsten Lichtmessung das Licht wieder ausmachen.
 
@@ -460,11 +460,11 @@ Versetzt man den Melder in den Modus **Auto AUS**, macht er das Licht aus und ig
 
 #### **Manuellmodus**
 
-Je nach Präsenzhardware kommt man mit Parametrisierung irgendwann nicht mehr weiter: Es gibt dann Fälle, bei den die Präsenzerkennung nicht mehr ausreicht und man will den Schaltzustand, den man eingestellt hat, auf jeden Fall behalten. Dafür ist der Manuellmodus da. 
+Je nach Präsenzhardware kommt man mit Parametrisierung irgendwann nicht mehr weiter: Es gibt dann Fälle, bei den die Präsenzerkennung nicht mehr ausreicht und man will den Schaltzustand, den man eingestellt hat, auf jeden Fall behalten. Dafür ist der Manuellmodus da.
 
 Wird der Melder in den Modus **Manuell EIN** versetzt, wird das Licht eingeschaltet und sowohl die Präsenz- wie auch die Helligkeitsinformation ignoriert. Damit bleibt das Licht auch an, wenn man sich gar nicht bewegt oder den Raum verlässt. Man muss also daran denken, den Modus auf Auto AUS zu wechseln.
 
-Wird der Melder in den Modus **Manuell AUS** versetzt, wird das Licht ausgeschaltet und sowohl die Helligkeits- wie auch die Präsenzinformation ignoriert. Damit bleibt das Licht aus, bis der Melder wieder im Modus Auto EIN ist, egal ob sich jemand im Raum bewegt oder ob es dunkel wird. 
+Wird der Melder in den Modus **Manuell AUS** versetzt, wird das Licht ausgeschaltet und sowohl die Helligkeits- wie auch die Präsenzinformation ignoriert. Damit bleibt das Licht aus, bis der Melder wieder im Modus Auto EIN ist, egal ob sich jemand im Raum bewegt oder ob es dunkel wird.
 
 Da der Manuellmodus entgegen der üblichen Gewohnheiten arbeitet (Licht geht nicht automatisch aus bzw. Licht geht nicht automatisch an) und man als Mensch dazu neigt, die Fehler bei der Technik und nicht bei sich selbst zu suchen (obwohl man vergessen hat, den Melder vom Manuell- in den Auto-Modus zu versetzen), bietet der Manuellmodus noch eine Rückfallzeit, nach der dieser Modus trotzdem verlassen wird. Hat man also abends das Licht über Manuell EIN eingeschaltet (weil man lesen will und bereits weiß, dass das Licht sonst beim lesen ausgeht) und geht danach ins Bett, würde man nicht am nächsten Morgen in einen immer noch hell erleuchteten Raum kommen, da eine auf 4 Stunden eingestellte Rückfallzeit den Melder wieder in den Normalmodus versetzt hat.
 
@@ -552,7 +552,7 @@ Die hier angegebene Zeit ist die Pause, in der auf einen neuen Helligkeitswert g
 
 Die Zeit sollte wohlüberlegt sein. Der interne Sensor benötigt für eine Lichtmessung ca. 5 Sekunden. Da intern keine Telegramme verloren gehen können, kann in diesem Fall 5 Sekunden angegeben werden.
 
-Bei einem externen Helligkeitssensor sollte die Zeitspanne mindestens die Zeit sein, mit der der externe Sensor seine Helligkeit zyklisch sendet. Da Telegramme verloren gehen können, wird eher die doppelte Zykluszeit empfohlen. 
+Bei einem externen Helligkeitssensor sollte die Zeitspanne mindestens die Zeit sein, mit der der externe Sensor seine Helligkeit zyklisch sendet. Da Telegramme verloren gehen können, wird eher die doppelte Zykluszeit empfohlen.
 Wenn der externe Helligkeitssensor auf Lesetelegramme antwortet und beim lesen wirklich die aktuell gemessene Helligkeit zurückliefert (machen die wenigsten), kann man die Zeit auch kürzer angeben und für die Neuberechnung den Helligkeitswert lesen lassen.
 
 > WICHTIG: Wenn man die [adaptive Ausschaltschwelle](#adaptive-ausschaltschwelle-über-helligkeit) nutzen will, ist es wichtig, dass nach dem einschalten einer neuen Lichtquelle auch ein neuer Helligkeitswert dem Melder vorliegt und er anhand dieses neuen Helligkeitswertes eine neue Ausschaltschwelle berechnen kann. Falls noch mit dem alten Helligkeitswert gerechnet wird, bleibt es bei der alten Ausschaltschwelle und das Licht wird möglicherweise sofort ausgeschaltet.
@@ -604,15 +604,15 @@ Melder, die eine an sich gute Präsenzerkennung bieten aber auch kurze Nachlaufz
 
 Einen Sonderfall nimmt hier der True Presence ein. Dieser sollte als **Präsenz und Bewegung** eingebunden werden und die Eingänge sollten mit den rohdaten des TP zur Präsenz und Bewegung verbunden werden (KO 81 und 82 vom TP)
 
-Will man 2 schaltende Slaves anschließen und kein extra ODER spendieren, kann man dies über **Präsenz und weitere Präsenz** einbinden. Es sind hier auch triggernde Slaves denkbar, aber triggernde Slaves (auch mehr als 2) können bei **Präsenz** als hörende Adressen eingebunden werden.  
+Will man 2 schaltende Slaves anschließen und kein extra ODER spendieren, kann man dies über **Präsenz und weitere Präsenz** einbinden. Es sind hier auch triggernde Slaves denkbar, aber triggernde Slaves (auch mehr als 2) können bei **Präsenz** als hörende Adressen eingebunden werden.
 
 Wenn der virtuelle PM nur Präsenzinformationen bekommt, sind die Funktionen Kurzzeitpräsenz und Raum verlassen nur mit langen Nachlaufzeiten und somit mit weniger Komfort nutzbar.
 
 ### **Eingang Präsenz / Bewegung / weitere Präsenz**
 
-Es erscheint je ein Kommunikationsobjekt "Eingang Präsenz", "Eingang Bewegung", "Eingang weitere Präsenz", der das entsprechende Signal eines Slaves empfängt. 
+Es erscheint je ein Kommunikationsobjekt "Eingang Präsenz", "Eingang Bewegung", "Eingang weitere Präsenz", der das entsprechende Signal eines Slaves empfängt.
 
-Für jeden dieser Eingänge ist folgende Einstellung ist möglich: 
+Für jeden dieser Eingänge ist folgende Einstellung ist möglich:
 
 #### **schaltend (EIN und AUS wird ausgewertet)**
 
@@ -624,13 +624,13 @@ Der externe Sensor liefert das Signal als Trigger. Sobald ein EIN-Signal anliegt
 
 Der externe Sensor muss sicherstellen, dass er valide Signale häufiger sendet als die minimale Nachlaufzeit, die verwendet wird. Empfohlen wird ein zyklisches senden, mindestens doppelt so häufig wie die geringste verwendete Nachlaufzeit (Da die Nachlaufzeit tagesphasenabhängig ist und die Kurzzeitpräsenz auch eine Nachlaufzeit hat, muss die kürzeste Nachlaufzeit berücksichtigt werden).
 
-> Achtung: Aus technischen Gründen wird bei triggerndem Betrieb das Eingangs-KO nach dem Empfangen einer 1 sofort wieder auf 0 gesetzt. Da dies ein Eingang ist, hat das üblicherweise keinerlei Auswirkungen. 
+> Achtung: Aus technischen Gründen wird bei triggerndem Betrieb das Eingangs-KO nach dem Empfangen einer 1 sofort wieder auf 0 gesetzt. Da dies ein Eingang ist, hat das üblicherweise keinerlei Auswirkungen.
 
 ### **Externer PM kann über Bus zurückgesetzt werden**
 
-Manche externe PM können über ein KO zurückgesetzt werden. Auch wenn es in der Applikation als "Reset" bezeichnet wird, ist damit nicht die ETS-Funktion "Gerät zurücksetzen" gemeint, sondern die Möglichkeit, den PM in einen Zustand zu versetzen, der die aktuelle Präsenzerkennung und alle zugehörigen Nachlaufzeiten zurücksetzt und unmittelbar auf die nächste erkannte Bewegung bzw. Präsenz ein Signal schickt. Besitzt der externe Melder einen solchen Eingang, kann dieser für die erweiterten Funkionen wie "Kurzzeitpräsenz" oder "Raum verlassen" genutzt werden. 
+Manche externe PM können über ein KO zurückgesetzt werden. Auch wenn es in der Applikation als "Reset" bezeichnet wird, ist damit nicht die ETS-Funktion "Gerät zurücksetzen" gemeint, sondern die Möglichkeit, den PM in einen Zustand zu versetzen, der die aktuelle Präsenzerkennung und alle zugehörigen Nachlaufzeiten zurücksetzt und unmittelbar auf die nächste erkannte Bewegung bzw. Präsenz ein Signal schickt. Besitzt der externe Melder einen solchen Eingang, kann dieser für die erweiterten Funkionen wie "Kurzzeitpräsenz" oder "Raum verlassen" genutzt werden.
 
-In dem Eingabefeld gibt man an, ob der externe PM mit einem EIN-Signal oder einem AUS-Signal zurückgesetzt werden kann. 
+In dem Eingabefeld gibt man an, ob der externe PM mit einem EIN-Signal oder einem AUS-Signal zurückgesetzt werden kann.
 
 Es erscheint ein KO "Externen PM zurücksetzen", das mit dem "Zurücksetzen"-Eingang des externen PM verbunden werden muss.
 
@@ -644,7 +644,7 @@ Wird dieser Wert in der Auswahlbox gewählt, kann der externe PM mit einem EIN-S
 
 #### **Mit einem AUS-Signal**
 
-Wird dieser Wert in der Auswahlbox gewählt, kann der externe PM mit einem 
+Wird dieser Wert in der Auswahlbox gewählt, kann der externe PM mit einem
 AUS-Signal zurückgesetzt werden. Der VPM schickt zu gegebener Zeit einen AUS-Trigger an den externen PM.
 
 ## **Ausgänge**
@@ -864,7 +864,7 @@ Da die vorliegende Applikation ein virtueller Präsenzmelder (VPM) ist, ist das 
 
 Da man zu dem Zeitpunkt, in dem man die "Raum verlassen"-Taste drückt, wahrscheinlich noch im Raum ist, kann noch eine kurze Totzeit eingestellt werden, die der Melder nach dem Befehl wartet, bevor er den Reset macht.
 
-Alternativ kann man den Melder warten lassen, bis das Bewegungssignal (nicht das Präsenzsignal) auf AUS geht (mal also wirklich nicht mehr im Raum ist) zuzüglich einer kurzen Sicherheitspause in Form einer Totzeit, um erst dann bei der nächsten Bewegung wieder zu reagieren. 
+Alternativ kann man den Melder warten lassen, bis das Bewegungssignal (nicht das Präsenzsignal) auf AUS geht (mal also wirklich nicht mehr im Raum ist) zuzüglich einer kurzen Sicherheitspause in Form einer Totzeit, um erst dann bei der nächsten Bewegung wieder zu reagieren.
 
 Es muss aber klar sein, dass der VPM hier nicht "zaubern" kann. Wird nach der Totzeit ein erneutes Bewegungssignal an den Melder gesendet, obwohl keiner im Raum ist (weil z.B. der externe Melder zyklisch sendet), wird das Licht eingeschaltet. Wird hingegen der Raum verlassen und erneut betreten, während die Totzeit noch läuft, wird das Licht nicht automatisch eingeschaltet. Insofern kann diese Funktion nur unterstützend wirken und den Komfort erhöhen, aber nicht alle denkbaren Szenarien abdecken.
 
@@ -878,7 +878,7 @@ Die Funktion "Raum verlassen" wird nicht genutzt
 
 #### **Totzeit**
 
-Nach dem Aufruf von "Raum verlassen" wird eine gewisse Zeit gewartet und anschließend bei den nächsten Bewegung wieder die normale PM-Funktion gestartet. 
+Nach dem Aufruf von "Raum verlassen" wird eine gewisse Zeit gewartet und anschließend bei den nächsten Bewegung wieder die normale PM-Funktion gestartet.
 
 > Sollte die Totzeit zu kurz gewählt sein und es befindet sich noch jemand im Raum, würde das Licht direkt nach der Totzeit wieder eingeschaltet werden.
 
@@ -940,11 +940,11 @@ Da alle Seiten zur Definition von Tagesphasen gleich sind, wird hier nur eine Se
 
 ## Funktion
 
-Eine Tagesphase kann als Halb- oder Vollautomat funktionieren. 
+Eine Tagesphase kann als Halb- oder Vollautomat funktionieren.
 
 <kbd>![Funktion der Tagesphase](pics/TagesphaseFunktion.png)</kbd>
 
-Es gibt drei denkbare Funktionen, die alle implementiert sind. 
+Es gibt drei denkbare Funktionen, die alle implementiert sind.
 
 * Standardmäßig wird die Tagesphase dazu genutzt, das Licht sowohl ein- wie auszuschalten.
 * Man möchte nur manuell einschalten und es wird automatisch ausgeschaltet.
@@ -961,11 +961,11 @@ Die Standardeinstellung, in der der Melder sowohl ein- wie auch ausschalten kann
 #### **Manuell Ein-, automatisch Ausschalten**
 
 In dieser Einstellung wird das Licht mittels eines EIN-Signals auf den Eingang 'Automatikmodus überschreiben' oder eine Szene eingeschaltet werden. Ausgeschaltet wird es über Helligkeit oder Präsenz (bzw. Nichtpräsenz).
-Eine Tagesphase "Nacht" würde z.B. mit dieser Einstellung kein Licht einschalten, aber durchaus ausschalten, falls es über einen Taster eingeschaltet wurde. 
+Eine Tagesphase "Nacht" würde z.B. mit dieser Einstellung kein Licht einschalten, aber durchaus ausschalten, falls es über einen Taster eingeschaltet wurde.
 
 #### **Automatisch Ein-, manuell Ausschalten**
 
-In dieser Einstellung wird das Licht vom Präsenzmelder anhand von Präsenz- und Helligkeitsinformationen eingeschaltet, muss aber über ein AUS-Signal auf den Eingang 'Automatikmodus überschreiben' oder eine Szene ausgeschaltet werden. 
+In dieser Einstellung wird das Licht vom Präsenzmelder anhand von Präsenz- und Helligkeitsinformationen eingeschaltet, muss aber über ein AUS-Signal auf den Eingang 'Automatikmodus überschreiben' oder eine Szene ausgeschaltet werden.
 
 ## Helligkeit
 
@@ -1031,9 +1031,9 @@ Es gibt Situationen, in denen man einen Raum nur kurz betritt und schnell danach
 
 Wird hier ein "Ja" gewählt, kann man Einstellungen für Kurzzeitpräsenz vornehmen.
 
-Damit Kurzzeitpräsenz funktioniert, muss das externe Präsenz- bzw. Bewegungssignal auch häufig gesendet werden. Eine Kurzzeitpräsenz von 30 Sekunden kann nicht erkannt werden, wenn Präsenz-Signale nur jede Minute ankommen. Deswegen ist das Timing hier wichtig und man muss darauf achten, wann der externe Melder entsprechende Signale schickt. 
+Damit Kurzzeitpräsenz funktioniert, muss das externe Präsenz- bzw. Bewegungssignal auch häufig gesendet werden. Eine Kurzzeitpräsenz von 30 Sekunden kann nicht erkannt werden, wenn Präsenz-Signale nur jede Minute ankommen. Deswegen ist das Timing hier wichtig und man muss darauf achten, wann der externe Melder entsprechende Signale schickt.
 
-Der Melderkanal ist so programmiert, dass er beim Vorhandensein von Präsenz- und Bewegungs-Signalen das Bewegungssignal für die Kurzzeitpräsenzerkennung benutzt. Das kann aber auch zu unerwarteten Effekten führen: Man kommt in ein Wohnzimmer und setzt sich gleich auf das Sofa. Die Bewegung hört innerhalb von 10 Sekunden auf, es wird somit (unerwünscht) eine 30-Sekunden-Kurzzeitpräsenz erkannt und das Licht geht aus. 
+Der Melderkanal ist so programmiert, dass er beim Vorhandensein von Präsenz- und Bewegungs-Signalen das Bewegungssignal für die Kurzzeitpräsenzerkennung benutzt. Das kann aber auch zu unerwarteten Effekten führen: Man kommt in ein Wohnzimmer und setzt sich gleich auf das Sofa. Die Bewegung hört innerhalb von 10 Sekunden auf, es wird somit (unerwünscht) eine 30-Sekunden-Kurzzeitpräsenz erkannt und das Licht geht aus.
 
 Es kann somit Räume geben, die für Kurzzeitpräsenz nicht geeignet sind oder wo Kurzzeitpräsenz nur zu bestimmten Zeiten sinnvoll ist. Im zweiten Fall sollte man unterschiedliche Tagesphasen nutzen.
 
@@ -1049,7 +1049,7 @@ Erscheint nur, wenn "Kurze Anwesenheit erkennen?" ausgewählt ist.
 
 Dies ist die Dauer, die nach einer kurzen Anwesenheit keine Präsenz festgestellt werden darf, damit eine Kurzzeitpräsenz erkannt werden kann. Wird in dieser Zeit eine Präsenz erkannt, so wird aus der Kurzzeitpräsenz eine Langzeitpräsenz.
 
-> Wichtig: Diese Zeit muss immer länger als die Zeit sein, die der externe Melder benötigt, um eine erneute Präsenz bzw. Bewegung zu senden. Ist die Zeit zu kurz, wird dem Melder keine Möglichkeit gegeben, eine erneute Bewegung festzustellen und man landet immer in der Kurzzeitpräsenz. 
+> Wichtig: Diese Zeit muss immer länger als die Zeit sein, die der externe Melder benötigt, um eine erneute Präsenz bzw. Bewegung zu senden. Ist die Zeit zu kurz, wird dem Melder keine Möglichkeit gegeben, eine erneute Bewegung festzustellen und man landet immer in der Kurzzeitpräsenz.
 
 > Achtung: Obwohl technisch möglich, sollte hier nie der Wert 0 eingetragen werden, da der Kanal dann keine Chance hat, nach der Kurzzeitpräsenz eine Langzeitpräsenz festzustellen.
 
@@ -1155,25 +1155,25 @@ Wird diese Funktion ausgeführt, wird der Automatikmodus gestartet und ein EIN-S
 
 ### **Manuell übersteuern mit AUS**
 
-Wird diese Funktion ausgeführt, wird der Manuell-Modus gestartet und ein AUS-Signal gesendet. Die Funktion ist identisch mit dem Empfang eines AUS-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Zweitastenmodus" konfiguriert ist. 
+Wird diese Funktion ausgeführt, wird der Manuell-Modus gestartet und ein AUS-Signal gesendet. Die Funktion ist identisch mit dem Empfang eines AUS-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Zweitastenmodus" konfiguriert ist.
 
 > Wichtig: Auch wenn bei "Manuell übersteuern" der "Eintastenmodus" konfiguriert ist, verhält sich diese Szene wie beim "Zweitastenmodus"!
 
 ### **Manuell übersteuern mit EIN**
 
-Wird diese Funktion ausgeführt, wird der Manuell-Modus gestartet und ein EIN-Signal gesendet. Die Funktion ist identisch mit dem Empfang eines EIN-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Zweitastenmodus" konfiguriert ist. 
+Wird diese Funktion ausgeführt, wird der Manuell-Modus gestartet und ein EIN-Signal gesendet. Die Funktion ist identisch mit dem Empfang eines EIN-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Zweitastenmodus" konfiguriert ist.
 
 > Wichtig: Auch wenn bei "Manuell übersteuern" der "Eintastenmodus" konfiguriert ist, verhält sich diese Szene wie beim "Zweitastenmodus"!
 
 ### **Manuell aktivieren**
 
-Wird diese Funktion ausgeführt, wird der Manuell-Modus gestartet und der aktuelle Schaltzustand beigehalten. Die Funktion ist identisch mit dem Empfang eines EIN-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Eintastenmodus" konfiguriert ist. 
+Wird diese Funktion ausgeführt, wird der Manuell-Modus gestartet und der aktuelle Schaltzustand beigehalten. Die Funktion ist identisch mit dem Empfang eines EIN-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Eintastenmodus" konfiguriert ist.
 
 > Wichtig: Auch wenn bei "Manuell übersteuern" der "Zweitastenmodus" konfiguriert ist, verhält sich diese Szene wie beim "Eintastenmodus"!
 
 ### **Manuell deaktivieren**
 
-Wird diese Funktion ausgeführt, wird der Manuell-Modus gestoppt und aktuelle Schaltzustand beibehalten. Die Funktion ist identisch mit dem Empfang eines AUS-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Eintastenmodus" konfiguriert ist. 
+Wird diese Funktion ausgeführt, wird der Manuell-Modus gestoppt und aktuelle Schaltzustand beibehalten. Die Funktion ist identisch mit dem Empfang eines AUS-Telegramms auf dem Kommunikationsobjekt "Manuell übersteuern", wenn "Manuell übersteuern" für den "Eintastenmodus" konfiguriert ist.
 
 > Wichtig: Auch wenn bei "Manuell übersteuern" der "Zweitastenmodus" konfiguriert ist, verhält sich diese Szene wie beim "Eintastenmodus"!
 
@@ -1230,7 +1230,7 @@ Es wird ein interner Reset des Melders durchgeführt. Die Funktion ist identisch
 ### **Zur Tagesphase *n* wechseln**
 
 Für jede der Tagesphasen 1-4 gibt es die entsprechende Tagesphasen-funktion.
-Es passiert exakt das gleiche wie beim Senden der Tagesphase an das KO "Tagesphase". 
+Es passiert exakt das gleiche wie beim Senden der Tagesphase an das KO "Tagesphase".
 
 Wird eine Tagesphase aufgerufen, die nicht definiert ist (z.B. Tagesphase 4, obwohl nur 3 definiert sind), wird die aktuelle Tagesphase beibehalten.
 
@@ -1250,7 +1250,7 @@ Dies ist eine Funktion für erfahrene Benutzer.
 
 ### **Lesetelegramme beim Neustart**
 
-Bei einem Geräteneustart, sei es durch einen Ausfall der Busspannung, einen Reset auf dem Bus, eine Neuprogrammierung durch die ETS oder dem Drücken der Reset-Taste am Gerät, sind zuerst einmal alle Ein- und Ausgänge initial. Bei Ausgängen ist das nicht kritisch, denn diese werden vom Gerät selbst initialisiert, sobald das Gerät das erste Telegramm sendet. 
+Bei einem Geräteneustart, sei es durch einen Ausfall der Busspannung, einen Reset auf dem Bus, eine Neuprogrammierung durch die ETS oder dem Drücken der Reset-Taste am Gerät, sind zuerst einmal alle Ein- und Ausgänge initial. Bei Ausgängen ist das nicht kritisch, denn diese werden vom Gerät selbst initialisiert, sobald das Gerät das erste Telegramm sendet.
 
 Eingänge sind hier kritischer, da die Funktion eines Gerätes gravierend von den Werten an seinen Eingängen abhängen kann. So ist es prima, wenn das Gerät in der Tagesphase "Nacht" als Halbautomat konfiguriert ist und kein Licht einschaltet, sondern nur ausschaltet. Dummerweise gibt es einen kurzen Stromausfall, das Gerät startet neu und ist nach dem Neustart auf der Tagesphase "Abend", die bei der ersten Bewegung die volle Beleuchtung bietet. Oder man hat "einfach mal schnell" wenn alle schlafen mal einen Parameter am PM im Kinderzimmer geändert und das Gerät neuprogrammiert! Das Ergebnis ist das gleiche: Das Gerät ist nach der Neuprogrammierung im Initialzustand und macht bei nächster Gelegenheit das Licht an.
 
@@ -1260,9 +1260,9 @@ Triggernde Eingänge bieten keine Möglichkeit des Lesens bei Neustart. Das ist 
 
 Eingänge für Szenen können beim Neustart gelesen werden, aber man sollte sich Gedanken dazu machen, ob das Sinn macht. Eine GA für Szenen transportiert eine Szenen-Nummer, auf die potentiell viele Geräte reagieren, andere aber auch nicht (obwohl sie mit der Szenen-GA verbunden sind). Es kann somit sein, dass der PM auf die "Licht AUS"-Szene reagiert, aber nicht auf die "Fernsehen"-Szene, die auf der gleichen GA transportiert wird. Als Mensch würde man nach einem Neustart des PM erwarten, dass er den letzten Zustand wieder herstellt, also den "Licht AUS"-Zustand. Wenn der PM aber die Szenen-GA liest, bekommt er "Fernsehen" als Antwort (weil das einfach die letzte Szene war) und kann damit nichts anfangen. Somit sollten Szenen-GA, die nach einem Neustart gelesen werden, nur Szenen-Telegramme senden, die der PM auch verstehen kann. Dies gilt insbesondere für die Szenen, die die Tagesphasen abbilden.
 
-Auch wenn es trivial ist, soll es hier erwähnt werden: Inaktive Eingänge können natürlich auch keine Lesetelegramme verschicken. 
+Auch wenn es trivial ist, soll es hier erwähnt werden: Inaktive Eingänge können natürlich auch keine Lesetelegramme verschicken.
 
-Bei mehreren mit einem Eingang verbundenen GA wird das Lesetelegramm immer nur an die erste GA (diejenige, die das Sendend-Flag trägt) gesendet. Somit sollte diese GA mit dem Statusobjekt verbunden sein, welches eine qualifizierte Antwort senden kann. 
+Bei mehreren mit einem Eingang verbundenen GA wird das Lesetelegramm immer nur an die erste GA (diejenige, die das Sendend-Flag trägt) gesendet. Somit sollte diese GA mit dem Statusobjekt verbunden sein, welches eine qualifizierte Antwort senden kann.
 
 > Wichtig: Der Neustart eines Gerätes nach dem Neuprogrammieren verhält sich womöglich anders als der Neustart aller KNX-Geräte nach einem Stromausfall. Lesetelegramme, die zu früh abgeschickt werden, erhalten womöglich keine Antwort, weil das angefragte Gerät selbst noch nicht gestartet ist oder noch nicht im korrekten Zustand zum Beantworten von Telegrammen ist. Deswegen kann sowohl der gesamte Präsenzmelder wie auch jeder Präsenzkanal des Melders eine Startverzögerung erhalten, die es erlaubt, erst dann zu starten, wenn alle abhängigen Geräte bereits gestartet sind.
 
@@ -1284,7 +1284,7 @@ Folgendes ist noch zu beachten:
 
 #### **Lesetelegramme und interne Verknüpfungen**
 
-Wird ein Eingang intern verknüpft, ist dies so, als ob der verknüpfte Eingang am anderen "lauscht", der Eingang bekommt alle Telegramme mit, die bei dem verknüpften KO eingehen. Nichtsdestotrotz ist der verknüpfte Eingang nur eine Art "Gast", das KO "gehört" eine anderen Funktion, z.B. ist es der Eingang einer Logik im Logikmodul. Deswegen hat der verknüpfte Eingang auch keinerlei "Rechte" am verknüpften KO und dann dieses KO nicht irgendwie beeinflussen. 
+Wird ein Eingang intern verknüpft, ist dies so, als ob der verknüpfte Eingang am anderen "lauscht", der Eingang bekommt alle Telegramme mit, die bei dem verknüpften KO eingehen. Nichtsdestotrotz ist der verknüpfte Eingang nur eine Art "Gast", das KO "gehört" eine anderen Funktion, z.B. ist es der Eingang einer Logik im Logikmodul. Deswegen hat der verknüpfte Eingang auch keinerlei "Rechte" am verknüpften KO und dann dieses KO nicht irgendwie beeinflussen.
 
 Deswegen ist es auch logisch, dass ein solcher verknüpfter Eingang auch keine Lesetelegramme beim Neustart absetzen kann. Somit bieten verknüpfte Eingänge auch keine Option zum Senden von Lesetelegrammen an. Man kann aber - sofern es für die Funktion des verknüpften KO zulässt - das fremde KO ein Lesetelegramm senden lassen. Die Antwort würde auch der verknüpfte Eingang erhalten.
 
@@ -1302,21 +1302,21 @@ Die Spalte Eingang gibt an, um welchen Eingang es sich handelt. Der Name entspri
 
 #### **Spalte Lesen**
 
-In der Spalte Lesen kann man eine Markierung setzen, wenn man möchte, dass für diesen Eingang bei einem Neustart ein Initialwert gelesen wird. 
+In der Spalte Lesen kann man eine Markierung setzen, wenn man möchte, dass für diesen Eingang bei einem Neustart ein Initialwert gelesen wird.
 
-Ist dieser Eingang intern verknüpft, ist ein Lesen beim Neustart nicht möglich. Man kann aber versuchen, das verknüpfte KO (bzw. dessen Funktion) so zu parametrieren, dass ein Lesen bei Neustart erfolgt. 
+Ist dieser Eingang intern verknüpft, ist ein Lesen beim Neustart nicht möglich. Man kann aber versuchen, das verknüpfte KO (bzw. dessen Funktion) so zu parametrieren, dass ein Lesen bei Neustart erfolgt.
 
 > Wichtig: Falls der Eingang kein Lesen beim Neustart unterstützt, gibt es in dieser Spalte auch keine Möglichkeit, eine Markierung zu setzen.
 
 #### **Spalte Neues KO erzeugen oder ein bestehendes KO nutzen**
 
-In dieser Spalte kann man angeben, ob man eine interne Verknüpfung mit einem anderen KO haben möchte. 
+In dieser Spalte kann man angeben, ob man eine interne Verknüpfung mit einem anderen KO haben möchte.
 
-Die Auswahl "Neues KO" bedeutet, dass dieser Eingang ein eigenes (neues) KO bekommt und nicht intern verknüpft ist. 
+Die Auswahl "Neues KO" bedeutet, dass dieser Eingang ein eigenes (neues) KO bekommt und nicht intern verknüpft ist.
 
 <kbd>![Eingang mit Verknüpfung](pics/EingangLink.png)</kbd>
 
-Die Auswahl "Bestehendes KO" erlaubt die Eingabe einer KO-Nummer. Der Eingang ist dann intern mit diesem KO verknüpft. Das ist vergleichbar mit einer externen Verknüpfung mittels einer GA. 
+Die Auswahl "Bestehendes KO" erlaubt die Eingabe einer KO-Nummer. Der Eingang ist dann intern mit diesem KO verknüpft. Das ist vergleichbar mit einer externen Verknüpfung mittels einer GA.
 
 > Wichtig: Es kann jedes aktive KO der gesamten ETS-Applikation ausgewählt werden, egal ob es sich um das Präsenzmodul oder das Logikmodul handelt. Bei nicht aktiven KO *kann* die Verknüpfung funktionieren, muss es aber nicht. Es wird ganz klar empfohlen, nur mit aktiven (in der ETS-KO-Liste sichtbaren) KO zu verknüpfen.
 
@@ -1349,11 +1349,11 @@ Eingang | Lesen | Interne Verknüpfung | Deaktiviert | Anmerkung
 | **Bewegung** | wenn schaltend | X | wenn "nur Präsenz" oder Hardware-PM |
 | **Automatik übersteuern** | | X | | triggernder Eingang
 | **Manuell übersteuern** | | X | | triggernder Eingang
-| **Aktorstatus** | X | X |  | 
+| **Aktorstatus** | X | X |  |
 | **Sperre** | X | X | wenn keine Sperre parametrisiert wurde |
-| **Reset** | | X |  | Lesen bei Neustart macht keinen Sinn 
-| **Tagesphase** | X | X | bei nur einer Phase | 
-| **PM über Szene steuern** | X | X | | 
+| **Reset** | | X |  | Lesen bei Neustart macht keinen Sinn
+| **Tagesphase** | X | X | bei nur einer Phase |
+| **PM über Szene steuern** | X | X | |
 
 ## **Kommunikationsobjekte**
 
@@ -1394,7 +1394,7 @@ Dieser Ausgang liefert verschiedene Werte, die die Art der Bewegung charakterisi
 
 Erscheint nur, wenn der HF-Sensor als Hardware-Sensor ausgewählt wurde.
 
-Dieser Ausgang liefert die relative Geschwindigkeit der gemessenen Bewegung in %, wobei 0% Stillstand und 100% quasi "unendlich schnell auf den Melder zu-  oder -wegrennen" bedeutet. Radialbewegungen werden durch diesen wert nicht repräsentiert.  
+Dieser Ausgang liefert die relative Geschwindigkeit der gemessenen Bewegung in %, wobei 0% Stillstand und 100% quasi "unendlich schnell auf den Melder zu-  oder -wegrennen" bedeutet. Radialbewegungen werden durch diesen wert nicht repräsentiert.
 
 > Wichtig: Dieses Signal ist für Analysezwecke gedacht. Es ist nicht dazu geeignet, irgendwelche Schaltvorgänge zu machen. Um etwas zu schalten, sollte man zwingend die vorhandenen Kanäle des Melders nutzen.
 
@@ -1412,7 +1412,7 @@ Ist irgendeine Tagesphase aktiv, die die Hardware-LED abschaltet, bleiben die LE
 
 Erscheint nur, wenn der HF-Sensor als Hardware-Sensor ausgewählt wurde.
 
-Ein Lesetelegramm auf dieses KO liefert das aktuell eingestellte Szenario. Ein Schreibtelegramm ändert das aktuell eingestellte Szenario. 
+Ein Lesetelegramm auf dieses KO liefert das aktuell eingestellte Szenario. Ein Schreibtelegramm ändert das aktuell eingestellte Szenario.
 
 Die Werte für verfügbare Szenarien sind im Kapitel [Szenario](#detektions-szenario) beschrieben.
 
@@ -1420,7 +1420,7 @@ Die Werte für verfügbare Szenarien sind im Kapitel [Szenario](#detektions-szen
 
 Erscheint nur, wenn der HF-Sensor als Hardware-Sensor ausgewählt wurde.
 
-Ein Lesetelegramm auf dieses KO liefert die aktuell eingestellte Empfindlichkeit. Ein Schreibtelegramm ändert die aktuell eingestellte Empfindlichkeit. 
+Ein Lesetelegramm auf dieses KO liefert die aktuell eingestellte Empfindlichkeit. Ein Schreibtelegramm ändert die aktuell eingestellte Empfindlichkeit.
 
 Verfügbare Empfindlichkeiten gehen von 1 bis 10, was den Empfindlichkeiten 10% bis 100% entspricht. Eine Empfindlichkeit von 0 ist nicht erlaubt.
 
@@ -1434,12 +1434,12 @@ Die folgenden Kommunikationsobjekte sind Kanalabhängig, jeder Kanal hat einen e
 
     x = n + (k - 1) * 20
 
-Beispiel: Das hier beschriebene KO 53 (n = 53) für Kanal 15 (k = 15) ist 
+Beispiel: Das hier beschriebene KO 53 (n = 53) für Kanal 15 (k = 15) ist
 
-      53 + (15 - 1) * 20 
-    = 53 + 14 * 20 
-    = 53 + 280 = 333. 
-    
+      53 + (15 - 1) * 20
+    = 53 + 14 * 20
+    = 53 + 280 = 333.
+
 Somit hat KO 333 für Kanal 15 die gleiche Funktion wie KO 53 für Kanal 1.
 
 #### **Helligkeit Extern (KO 50)**
@@ -1450,9 +1450,9 @@ Dieses KO empfängt die Helligkeit als DPT 9.004 von einer externen Quelle über
 
 #### **Präsenz (KO 51)**
 
-Erscheint nur, wenn der Kanal externe Präsenzinformation empfangen soll. 
+Erscheint nur, wenn der Kanal externe Präsenzinformation empfangen soll.
 
-Dieses KO empfängt das Präsenzsignal als DPT 1.xxx von einer externen Quelle über den Bus. 
+Dieses KO empfängt das Präsenzsignal als DPT 1.xxx von einer externen Quelle über den Bus.
 
 Das Präsenzsignal kann triggernd sein, dann werden nur EIN-Telegramme ausgewertet, oder auch schaltend, dann werden sowohl EIN- wie auch AUS-Telegramme ausgewertet.
 
@@ -1462,9 +1462,9 @@ Dieses KO wird bei triggernder Auswertung aus technischen Gründen sofort nach d
 
 #### **Bewegung (KO 52)**
 
-Erscheint nur, wenn der Kanal externe Bewegungsinformation empfangen soll. 
+Erscheint nur, wenn der Kanal externe Bewegungsinformation empfangen soll.
 
-Dieses KO empfängt das Bewegungssignal als DPT 1.xxx von einer externen Quelle über den Bus. 
+Dieses KO empfängt das Bewegungssignal als DPT 1.xxx von einer externen Quelle über den Bus.
 
 Das Bewegungssignal kann triggernd sein, dann werden nur EIN-Telegramme ausgewertet, oder auch schaltend, dann werden sowohl EIN- wie auch AUS-Telegramme ausgewertet.
 
@@ -1474,7 +1474,7 @@ Dieses KO wird bei triggernder Auswertung aus technischen Gründen sofort nach d
 
 #### **Weitere Präsenz (KO 52)**
 
-Erscheint nur, wenn der Kanal Präsenz + weitere Präsenz empfangen soll. 
+Erscheint nur, wenn der Kanal Präsenz + weitere Präsenz empfangen soll.
 
 Für den Eingang gilt das gleiche wie für [Präsenz (KO 51)](#präsenz-ko-51).
 
@@ -1482,9 +1482,9 @@ Für den Eingang gilt das gleiche wie für [Präsenz (KO 51)](#präsenz-ko-51).
 
 Dieses KO empfängt ein Schaltsignal DPT 1 und teilt dem Melder einen Benutzerwunsch mit.
 
-Ein EIN-Telegramm an diesem Eingang übersteuert die interne Helligkeitsautomatik und schaltet das Licht auf jeden Fall ein. 
+Ein EIN-Telegramm an diesem Eingang übersteuert die interne Helligkeitsautomatik und schaltet das Licht auf jeden Fall ein.
 
-Ein AUS-Telegramm an diesem Eingang übersteuert die interne Helligkeitsautomatik und schaltet das Licht auf jeden Fall aus. 
+Ein AUS-Telegramm an diesem Eingang übersteuert die interne Helligkeitsautomatik und schaltet das Licht auf jeden Fall aus.
 
 In beiden Fällen wird die Nachlaufzeit gestartet und ein eventueller Manuell-Modus beendet.
 
@@ -1494,11 +1494,11 @@ Dieser Eingang ist dafür gedacht, mit einem Taster verbunden zu werden, um das 
 
 Dieses KO empfängt ein Schaltsignal DPT 1 und teilt dem Melder einen Benutzerwunsch mit.
 
-Ein EIN-Telegramm an diesem Eingang übersteuert die interne Helligkeits- und Präsenzautomatik und schaltet das Licht auf jeden Fall ein. 
+Ein EIN-Telegramm an diesem Eingang übersteuert die interne Helligkeits- und Präsenzautomatik und schaltet das Licht auf jeden Fall ein.
 
-Ein AUS-Telegramm an diesem Eingang übersteuert die interne Helligkeits- und Präsenzautomatik und schaltet das Licht auf jeden Fall aus. 
+Ein AUS-Telegramm an diesem Eingang übersteuert die interne Helligkeits- und Präsenzautomatik und schaltet das Licht auf jeden Fall aus.
 
-In beiden Fällen wird ein eventueller Automatik-Modus beendet und jegliche Nachlaufzeit beendet. 
+In beiden Fällen wird ein eventueller Automatik-Modus beendet und jegliche Nachlaufzeit beendet.
 
 Der Melder bleibt in diesem Modus, bis die Rückfallzeit abgelaufen ist oder bis ein Telegramm auf KO 53 eingeht.
 
@@ -1510,7 +1510,7 @@ Dieser empfängt den Status (DPT 1) des Aktors, der vom PM-Kanal geschaltet wird
 
 Schaltet der PM-Kanal mehrere Lichtkreise (z.B. über Szenen), sollten alle Status aller Lichtkreise in der Logik über ein ODER verknüpft werden und das Oder mit diesem Eingang verbunden werden. Damit weiß der PM, dass irgendeiner seiner geschalteten Kanäle eingeschaltet ist bzw. dass alle ausgeschaltet sind.
 
-Durch die Rückmeldung des Aktors / der Aktoren weiß der Melder über Raumzustand Bescheid und kann passend zur Präsenz und Helligkeit reagieren. 
+Durch die Rückmeldung des Aktors / der Aktoren weiß der Melder über Raumzustand Bescheid und kann passend zur Präsenz und Helligkeit reagieren.
 
 Er kann z.B. das Licht ausschalten, auch wenn es "am Melder vorbei" eingeschaltet wurde. Er kann auch Nachlaufzeiten bzw. den Manuellmodus beenden, wenn die Situation im Raum nicht mehr dem entspricht, was der Melder durch eigene Schaltvorgänge annimmt.
 
@@ -1524,9 +1524,9 @@ Ein Aktorstatuswechsel kann nur durch 2 Dinge passieren:
 
 #### **Sperre (KO 56)**
 
-Erscheint nur, wenn eine Sperre parametrisiert ist. 
+Erscheint nur, wenn eine Sperre parametrisiert ist.
 
-Dieser Eingang empfängt ein Sperr-Telegramm (DPT 1). 
+Dieser Eingang empfängt ein Sperr-Telegramm (DPT 1).
 
 Jeder Kanal unterstützt eine Sperre mit Rückfallzeit, allerdings sollte bei einer intelligenten Parametrisierung des Melders eine Sperre nicht nötig sein.
 
@@ -1534,7 +1534,7 @@ Jeder Kanal unterstützt eine Sperre mit Rückfallzeit, allerdings sollte bei ei
 
 Erscheint nur, wenn eine Zwangsführung parametrisiert ist.
 
-Dieser Eingang empfängt ein Zwangsführungs-Telegramm (DPT 2). 
+Dieser Eingang empfängt ein Zwangsführungs-Telegramm (DPT 2).
 
 Jeder Kanal unterstützt eine Zwangsführung mit Rückfallzeit, allerdings sollte bei einer intelligenten Parametrisierung des Melders eine Zwangsführung nicht nötig sein.
 
@@ -1556,9 +1556,9 @@ Dieses KO empfängt ein Schalttelegramm (DPT 1.xxx). Ob ein EIN-Telegramm die Be
 
 #### **Einschalt-Helligkeitsschwelle (KO 59)**
 
-Dieses KO enthält einen Helligkeitswert (DPT 9.004). 
+Dieses KO enthält einen Helligkeitswert (DPT 9.004).
 
-Wird das KO gelesen, liefert es die aktuelle Einschalt-Helligkeitsschwelle. Das ist der Lux-Wert, bei dessen Unterschreitung das Licht eingeschaltet wird (Präsenz vorausgesetzt). 
+Wird das KO gelesen, liefert es die aktuelle Einschalt-Helligkeitsschwelle. Das ist der Lux-Wert, bei dessen Unterschreitung das Licht eingeschaltet wird (Präsenz vorausgesetzt).
 
 Wird das KO beschrieben, wird der neue Wert sofort als Einschalt-Helligkeitsschwelle angenommen. Ist der aktuelle Helligkeitswert 100 Lux und man schreibt in dieses KO den Wert 200 Lux, geht das Licht sofort an. Schreibt man 0 Lux, wird das Licht nie angehen, da die Helligkeit 0 Lux nicht unterschreiten kann.
 
@@ -1568,7 +1568,7 @@ Um unnötige Telegramme auf dem Bus zu vermeiden, hat dieses KO kein Ü-Flag ges
 
 #### **Nachlaufzeit (KO 60)**
 
-Dieses KO enthält eine Zeit in Sekunden (DPT 7.005). 
+Dieses KO enthält eine Zeit in Sekunden (DPT 7.005).
 
 Wird das KO gelesen, liefert es die aktuelle Nachlaufzeit des Kanals. Es handelt sich nicht um die Nachlaufzeit der Kurzzeitpräsenz. Es ist immer die gesamte Nachlaufzeit, nicht die verbleibende Zeit der Nachlaufzeit.
 
@@ -1581,7 +1581,7 @@ Um unnötige Telegramme auf dem Bus zu vermeiden, hat dieses KO kein Ü-Flag ges
 
 #### **PM über Szene steuern (KO 61)**
 
-Dieses KO empfängt ein Szenen-Telegramm (DPT 17.001). 
+Dieses KO empfängt ein Szenen-Telegramm (DPT 17.001).
 
 Wenn diese Szene einer der unter Szenen-Steuerung definierten Szenen entspricht, wird die entsprechende Funktion der Szenensteuerung ausgeführt. Auf diese Weise kann der PM über Szenen gesteuert werden.
 
@@ -1657,7 +1657,7 @@ Ein EIN-Telegramm bedeutet, der Kanal befindet sich im Manuellmodus, ein AUS-Tel
 
 #### **Änderung relativ dimmen / absolut dimmen / schalten (KO 65-67)**
 
-Diese 3 KO sind für die korrekte Funktion der adaptiven Helligkeits-Ausschaltschwelle verantwortlich. Wenn ein oder mehrere Lichtkreise von einem PM-Kanal geschaltet werden und der Kanal Licht ausschalten soll, wenn es im Raum hell genug ist, um das Licht auszuschalten, muss der Melder über jede **beabsichtigte** Änderung der Helligkeit wissen, da in solchen Fällen die Helligkeits-Ausschaltschwelle neu berechnet werden muss. 
+Diese 3 KO sind für die korrekte Funktion der adaptiven Helligkeits-Ausschaltschwelle verantwortlich. Wenn ein oder mehrere Lichtkreise von einem PM-Kanal geschaltet werden und der Kanal Licht ausschalten soll, wenn es im Raum hell genug ist, um das Licht auszuschalten, muss der Melder über jede **beabsichtigte** Änderung der Helligkeit wissen, da in solchen Fällen die Helligkeits-Ausschaltschwelle neu berechnet werden muss.
 
 Damit eine Neuberechnung passieren kann, muss jede GA, die die Helligkeit beeinflusst (sei es eine Schalt-, Absolut-Dimm- oder Relativ-Dimm-GA) jeweils Typgerecht mit einem der 3 Eingänge verbunden werden. Mit diesen KO können beliebig viele GA verbunden werden. Jedes Telegramm, dass hier eingeht, führt zu einer Neuberechnung der Ausschalt-Helligkeitsschwelle.
 
@@ -1691,4 +1691,3 @@ Die Software für dieses Release wurde auf folgender Hardware getestet und läuf
 Andere Hardware kann genutzt werden, jedoch muss das Projekt dann neu compiliert werden. Alle notwendigen Teile für ein Aufsetzen der Build-Umgebung inclusive aller notwendigen Projekte finden sich im [OpenKNX-Projekt](https://github.com/OpenKNX)
 
 Interessierte sollten auch die Beiträge im [OpenKNX-Forum](https://knx-user-forum.de/forum/projektforen/openknx) studieren.
-

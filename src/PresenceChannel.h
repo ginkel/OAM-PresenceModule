@@ -116,7 +116,8 @@
 // Presence Hardware
 #define VAL_PM_PS_None 0
 #define VAL_PM_PS_Pir 1
-#define VAL_PM_PS_Hf 2
+#define VAL_PM_PS_MR24xxB1 2
+#define VAL_PM_PS_LD2410 3
 
 // Presence Hardware
 #define VAL_PM_LUX_None 0
@@ -189,7 +190,7 @@ class PresenceChannel
     void processLock();
     void onLock(bool iLockOn, uint8_t iLockOnSend, uint8_t iLockOffSend);
     void startReset();
-    
+
     void startActorState(GroupObject &iKo);
     void processActorState();
 
@@ -235,7 +236,7 @@ class PresenceChannel
     uint32_t pBrightnessOffDelayTime = 0;  // brightness off delay
     uint8_t pLeaveRoomMode = 0; // used for leave room SM
     uint8_t pLastLockState = 255; // ensures sending just changed Lock states
-     
+
   public:
     PresenceChannel(uint8_t iChannelNumber);
     ~PresenceChannel();

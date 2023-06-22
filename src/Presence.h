@@ -1,9 +1,10 @@
 #pragma once
 #include "PresenceChannel.h"
-#include "knxprod.h"
-#include "hardware.h"
 #include "Sensor.h"
+#include "SensorLD2410.h"
 #include "SensorMR24xxB1.h"
+#include "hardware.h"
+#include "knxprod.h"
 
 // maps on KO to an Other KO
 // Used for internal KO infrastructure
@@ -35,7 +36,7 @@ public:
 
   // static
   static void switchHfSensor(bool iOn);
-  
+
   // instance
   bool PresenceTrigger = false;
   bool MoveTrigger = false;
@@ -70,9 +71,12 @@ private:
   int8_t mScenario = -1;
   int8_t mSensitivity = 1;
   // brightness is missing
-  #ifdef HF_POWER_PIN
+#ifdef HF_SENSOR_MR24xxB1
   SensorMR24xxB1 *mPresenceSensor;
-  #endif
+#endif
+#ifdef HF_SENSOR_LD2410
+  SensorLD2410 *mPresenceSensor;
+#endif
   Sensor *mBrightnessSensor;
   uint32_t mBrightnessDelay = 0;
   uint32_t mBrightnessProcess = 0;

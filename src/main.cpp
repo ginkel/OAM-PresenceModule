@@ -15,7 +15,7 @@ void setup()
 #ifdef HF_POWER_PIN
     pinMode(HF_POWER_PIN, OUTPUT);
     // at startup, we turn HF-Sensor off
-    digitalWrite(HF_POWER_PIN, LOW);
+    // digitalWrite(HF_POWER_PIN, HF_POWER_PIN_ACTIVE_ON == LOW ? HIGH : LOW);
 #endif
 #ifdef ARDUINO_ARCH_RP2040
     Serial1.setRX(KNX_UART_RX_PIN);
@@ -27,15 +27,17 @@ void setup()
     delay(DEBUG_DELAY);
     digitalWrite(PROG_LED_PIN, LOW);
 #ifdef HF_POWER_PIN
-    Serial2.setRX(HF_UART_RX_PIN);
-    Serial2.setTX(HF_UART_TX_PIN);
+    // SERIAL_HF.setRX(HF_UART_RX_PIN);
+    // SERIAL_HF.setTX(HF_UART_TX_PIN);
+#ifdef HF_SENSOR_MR24xxB1
     Wire1.setSDA(I2C_SDA_PIN);
     Wire1.setSCL(I2C_SCL_PIN);
     Sensor::SetWire(Wire1);
+    pinMode(HF_S1_PIN, INPUT);
+    pinMode(HF_S2_PIN, INPUT);
+#endif
     pinMode(PRESENCE_LED_PIN, OUTPUT);
     pinMode(MOVE_LED_PIN, OUTPUT);
-    pinMode(HF_S1_PIN, INPUT);
-    pinMode(HF_S2_PIN, INPUT);    
 #endif
     SERIAL_DEBUG.println("Startup called...");
     ArduinoPlatform::SerialDebug = &SERIAL_DEBUG;
@@ -76,25 +78,24 @@ void loop()
   // don't delay here to much. Otherwise you might lose packages or mess up the timing with ETS
   knx.loop();
 
-#ifdef HF_POWER_PIN
+#ifdef HF_SENSOR_MR24xxB1
   // only run the application code if the device was configured with ETS
-  if (knx.configured()) 
+  if (knx.configured())
   {
     if (!mSerial2Active)
     {
       // we start HF communication as late as possible
       mSerial2Active = true;
-      Serial2.begin(9600);
     }
     appLoop();
   }
   else
   {
-    if (mSerial2Active) 
+    if (mSerial2Active)
     {
         // during ETS programming, we stop HF communication
         mSerial2Active = false;
-        Serial2.end();
+        SERIAL_HF.end();
     }
   }
 #else
