@@ -1,7 +1,7 @@
 #include "Logic.h"
 #include "Presence.h"
 #ifdef ARDUINO_ARCH_RP2040
-    #include "UpdaterModule.h"
+    #include "FileTransferModule.h"
 #endif
 
 #ifdef ARDUINO_ARCH_RP2040
@@ -53,7 +53,7 @@ void setup()
     openknx.addModule(1, new Logic());
     openknx.addModule(2, new Presence());
 #ifdef ARDUINO_ARCH_RP2040
-    openknx.addModule(3, new UpdaterModule());
+    openknx.addModule(3, new FileTransferModule());
 #endif
     openknx.setup();
 }
