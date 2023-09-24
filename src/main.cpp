@@ -32,7 +32,9 @@ void setup()
 
     pinMode(PROG_LED_PIN, OUTPUT);
     digitalWrite(PROG_LED_PIN, HIGH);
+#ifdef DEBUG_DELAY
     delay(DEBUG_DELAY);
+#endif
     digitalWrite(PROG_LED_PIN, LOW);
 
 #ifdef HF_POWER_PIN
