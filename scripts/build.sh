@@ -16,8 +16,8 @@ fi
 env=$1
 target=$2
 
-cp "${DIR}/../src/PMmodulHardware.h" "${DIR}/../lib/OGM-Common/include/hardware.h"
-cp "${DIR}/../src/PMmodul.h" "${DIR}/../lib/OGM-Common/include/knxprod.h"
+cp "${DIR}/../include/hardware.h" "${DIR}/../lib/OGM-Common/include/hardware.h"
+cp "${DIR}/../include/knxprod.h" "${DIR}/../lib/OGM-Common/include/knxprod.h"
 
 (
     cd "${DIR}/../" || exit 2
